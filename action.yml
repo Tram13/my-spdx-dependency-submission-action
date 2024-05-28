@@ -5,7 +5,7 @@ inputs:
     description: "GitHub Personal Access Token (PAT). Defaults to PAT provided by Actions runner."
     required: false
     default: ${{ github.token }}
-  filePath:  
+  filePath:
     description: 'The path to the directory containing the SPDX files to upload. Defaults to Actions working directory.'
     required: false
     default: '.'
@@ -14,7 +14,7 @@ inputs:
     required: false
     default: '*.spdx.json'
 runs:
-  using: 'node16'
+  using: 'node20'
   main: 'dist/index.js'
 branding:
   icon: 'upload-cloud'
